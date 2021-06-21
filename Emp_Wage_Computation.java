@@ -28,4 +28,3 @@ public class Daily_Wage extends Emp_Attendance {
 		}
 	}
 }
-
