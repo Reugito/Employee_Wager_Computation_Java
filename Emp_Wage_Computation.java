@@ -1,26 +1,42 @@
-package uc2_Calculate_Daily_Employee_Wage;
 
-import uc1_Emloyee_Attendance.Emp_Attendance;
+package uc3_PartTime_Emp_Wage;
 
-public class Daily_Wage extends Emp_Attendance {
+import java.util.Random;
+
+import uc2_Calculate_Daily_Employee_Wage.Daily_Wage;
+
+public class PartTime_Wage extends Daily_Wage {   // Adding partime employee
 	
-	public static int Wager() {
+	public static int Attendance() {
 		
-		int WagePerHr = 20, FullDayHr = 8;
-		int Daily_wage = WagePerHr * FullDayHr;
-		return Daily_wage;
+		Random random = new Random();
+		int check = random.nextInt(3);
+		return check;
 	}
 	
+    public static int PartTimeWage() {             // part time wager
+    	
+    	int WagePerHr = 20, PartThimeHr = 4;
+    	int PartTimeWage = WagePerHr * PartThimeHr;
+        return PartTimeWage;
+    }
+    
 	public static void main(String[] args) {
 		
-		int attendance = Attendance();
+		int isPresent = 1, isParttime = 2, isAbsent=0;
 		
-		int isPresent = 1, isAbsent = 0; 
+		int attendance = Attendance();  
+		int dailyWage = Wager();                    
 		
 		if (attendance == isPresent) {
 			
-		System.out.print("Employee Daily wager = "+Wager());
-		}
+			System.out.print("Employee Full day wage = "+dailyWage);
+			}
+			
+		else if(attendance == isParttime) {
+
+			System.out.println("Employee Part time wage = "+PartTimeWage());
+			}
 		
 		else {
 			
