@@ -4,26 +4,24 @@ public class Emp_Attendance {
 
 	public static int Attendance() {
 	
-		int isPresent = 1, isAbsent = 0;
 		Random random = new Random();
 		int check = random.nextInt(2);
-		
-		if( check == isPresent ) {
-			
-			System.out.println("Employee is present");
-			return isPresent;
-		}
-		else {
-			
-			System.out.println("Employee is absent");
-		}
-		return 0;
+	
+		return check;
 	}
 	
 	public static void main(String args[]) {
 		
-		Attendance();
+		int check = Attendance();
+		int isPresent = 1, isAbsent = 0;
 		
+		if( check == isPresent ) {
+			System.out.println("Employee is present");	
+		}
+		
+		else {	
+			System.out.println("Employee is absent");
+		}	
 	}
-
 }
+
