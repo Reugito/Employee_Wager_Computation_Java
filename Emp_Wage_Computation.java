@@ -32,4 +32,3 @@ public class SwitchCase extends PartTime_Wage {
 		
 	}
 
-}
