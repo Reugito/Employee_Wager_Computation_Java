@@ -1,3 +1,4 @@
+
 package uc3.PartTime.Emp.Wage;
 
 import java.util.Random;
