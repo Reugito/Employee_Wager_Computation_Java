@@ -9,7 +9,7 @@ public class Monthly_Wages extends SwitchCase {
 		
 		int TotalWage = 0;
 		
-		for(int Day = 1; Day <= 30; Day++) {
+		for(int Day = 1; Day <= 20; Day++) {
 		
 			int check = Switch();
 			
