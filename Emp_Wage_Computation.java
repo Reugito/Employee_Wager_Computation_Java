@@ -8,7 +8,7 @@ public class Montly_Wage extends SwitchCase {
 		
 		int TotalWage = 0, day = 0, WorkinHr = 0;
 		
-		while( day <= 20 || WorkinHr <+ 100 ) {
+		while( day <= 20 || WorkinHr <= 100 ) {
 		
 			int check = Switch();
 			
