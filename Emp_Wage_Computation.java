@@ -1,5 +1,4 @@
 package uc2_Calculate_Daily_Employee_Wage;
-
 import uc1_Emloyee_Attendance.Emp_Attendance;
 
 public class Daily_Wage extends Emp_Attendance {
