@@ -1,4 +1,3 @@
-
 package uc3_PartTime_Emp_Wage;
 
 import java.util.Random;
@@ -11,14 +10,17 @@ public class PartTime_Wage extends Daily_Wage {   // Adding partime employee
 		
 		Random random = new Random();
 		int check = random.nextInt(3);
+		
 		return check;
 	}
 	
-    public static int PartTimeWage() {             // part time wager
+    public static int PartTimeWage() {             // adding part time wager
     	
     	int WagePerHr = 20, PartThimeHr = 4;
     	int PartTimeWage = WagePerHr * PartThimeHr;
         return PartTimeWage;
+	
+    	
     }
     
 	public static void main(String[] args) {
@@ -43,4 +45,5 @@ public class PartTime_Wage extends Daily_Wage {   // Adding partime employee
 			System.out.println("Employee Daily Wager = "+isAbsent);
 		}
 	}
+
 }
