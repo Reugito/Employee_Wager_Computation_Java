@@ -1,25 +1,41 @@
-package uc2.Calculate.Daily.Employee.Wage;
 
-import uc1.Emloyee.Attendance.Emp_Attendance;
+package uc3.PartTime.Emp.Wage;
 
-public class Daily_Wage extends Emp_Attendance {
+import java.util.Random;
+
+import uc2.Calculate.Daily.Employee.Wage.Daily_Wage;
+
+public class PartTime_Wage extends Daily_Wage {
 	
-	public static int Wager() {
+	public static int Attendance() {                 // adding part time employee
 		
-		int attendance = Attendance();    // Employee Attendance inherited from Emp_Attendance class
-		int WagePerHr = 20, FullDayHr = 8, isPresent = 1, isAbsent =0;
+		int isPresent = 1, isParttime = 2, isAbsent=0;
+		Random random = new Random();                  
+		int check = random.nextInt(3);
 		
-		if (attendance == isPresent) {
-			
-			int Daily_wage = WagePerHr * FullDayHr;
-			return Daily_wage;
-		}
-		return 0;
+		return check;
 	}
-	public static void main(String[] args) {
+	
+    public static int PartTimeWage() {                 // adding part time wager
+    	
+    	int isParttime = 2, WagePerHr = 20, PartThimeHr = 8;
+    	int attendance = Attendance();             // called static method of class without creating object
+    	
+    	if (attendance == isParttime) {
+			int PartTimeWage = WagePerHr * PartThimeHr;
+			return PartTimeWage;
+		}
+    	return 0;
+    	
+    }
+	public static void main(String[] args) {                  // calculating Total wager
 		
-		System.out.print("Employee Daily wager = "+Wager());
+		int parttimeWage = PartTimeWage();
+		int dailyWage = Wager();                    // Daily wager of Emp from Daily_wage class
+		int TotalWage = parttimeWage + dailyWage;   // Adding part time wage to daily wage
+		System.out.println("Employee daily Total Daily wage = "+TotalWage);
 		
+    
 	}
 
 }
