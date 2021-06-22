@@ -28,7 +28,7 @@ public class Monthly_Wages extends SwitchCase {
 				
 			default:                                                    //Absent
 
-               TotalWage += 0;
+              			TotalWage += 0;
 			}
 		}
 
