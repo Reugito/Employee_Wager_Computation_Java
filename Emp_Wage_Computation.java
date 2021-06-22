@@ -27,7 +27,7 @@ public class Montly_Wage extends SwitchCase {
 				
 				day++;
 				WorkinHr += 4;
-				TotalWage += PartTimeWage() + Wager();
+				TotalWage += PartTimeWage();
 				break;
 				
 			default: 																	//Absent
