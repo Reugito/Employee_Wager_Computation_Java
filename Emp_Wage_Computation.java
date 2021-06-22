@@ -23,7 +23,7 @@ public class Monthly_Wages extends SwitchCase {
 				
 			case isParttime:                                                        // part time wage
 			
-				TotalWage += PartTimeWage() + Wager();
+				TotalWage += PartTimeWage();
 				break;
 				
 			default:                                                    //Absent
