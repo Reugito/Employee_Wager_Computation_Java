@@ -33,7 +33,7 @@ public class Montly_Wage extends SwitchCase {
 			default: 									//Absent
 				day++;
 				WorkinHr += 0;
-                TotalWage += 0;
+                		TotalWage += 0;
 			}
 		}
 
